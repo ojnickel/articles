@@ -59,9 +59,11 @@
   border-radius: $radius;
 }
 
-@mixin box($radius: 6px, $border: 1px solid #000) {
+@mixin box($radius: 6px, $border: 1px solid #000, $bgc: #fff) {
   @include rounded($radius);
   border: $border;
+  width: 100%;
+  background-color: $bgc;
 }
 
 @mixin fancy-links {
