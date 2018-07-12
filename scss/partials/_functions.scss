@@ -14,3 +14,10 @@
 @function strip-unit($value) {
   @return $value / ($value*0 + 1);
 }
+
+@function color($key) {
+  @if not map-has-key($colors, $key) {
+    @warn "Key `#{$key}` not found in $colors map.";
+  }
+  @return map-get($colors, $key);
+}
