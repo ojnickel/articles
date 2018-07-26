@@ -2,50 +2,18 @@
 @import "partials/variables";
 @import "partials/mixins";
 
-ul {
-  flex: 1;
-  list-style: none;
-  width: 100%;
-  padding: 0;
+html {
   margin: 0;
-  text-align: center;
+  padding: 0;
+}
+body {
+    @extend html; 
 }
 
-ul li { 
- text-align: center;
- width: 50%;
- flex:0;
+.container {
+  @include container;    
 }
-      html, body {
-        margin: 0;
-        padding: 0;
-      }
-      .box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;  /*horizontaly*/
-        justify-content: center;/*vertically*/
-        min-height: 150px;
-        width: 100%;
-      }
-
-      .green {
-        background-color: #0C8542;
-      }
-
-      .red {
-        background-color: #EC1D3B;
-      }
-
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      }
-
-    @media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) {
         .container {
           width: 800px;
           margin-left: auto;
@@ -70,15 +38,23 @@ ul li {
   display: inline-block;
 }
 
-.box > a {
-  padding: 1rem;
-  text-decoration: none;
-  color: #009;
-  border: 3px solid #009;
+.box {
+    a {
+      padding: 1rem;
+      text-decoration: none;
+      color: #009;
+      border: 3px solid #009;
+
+      &:hover {
+        padding: 1rem;
+        border: 3px solid #009;
+      }
+    }
 }
 .box > a:hover {
-  padding: 1rem;
-  color: #fff;
-  background-color: #009;
-  border: 3px solid #009;
 }
+@include box (red);
+@include box (green);
+@include box (lblue);
+@include box (dblue);
+@include box (orange);
