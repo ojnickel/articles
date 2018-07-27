@@ -74,14 +74,30 @@
     }
 }
 
+
+@mixin article-bp($columns, $cgap: 1rem) {
+  .article {
+    overflow: auto;
+    flex-grow: 1;
+    @include mq($from: desktop) {
+        column-count: $columns;
+        column-gap: $cgap;
+    }
+  }
+}
+
 @mixin box($name, $width: 100%, $height: 150px, $text: black, $radius: 1px, $border: 0, $pad: 1rem) {
   //opposite color as the name of the box for a(links)
   $a-color: invert(color($name));
   .box-#{$name} {
     // styles for links
     @include a($a-color, lighten($a-color, 50%));
+
     // round   up the box
     @include rounded($radius);
+    //articles between this class
+    @include article-bp(3);
+
     border: $border;
     width: $width;
     min-height: $height;

@@ -11,3 +11,14 @@ $colors: (
   lblue: #099DD9,
   orange: #F79420
 );
+
+$mq-breakpoints: (
+    mobile:  375px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1300px
+);
+$format-art: (
+  ccount: 3,
+  cgap: 1rem
+);
