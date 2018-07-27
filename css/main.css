@@ -1,42 +1,116 @@
-ul {
-  flex: 1;
-  list-style: none;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: center; }
-
-ul li {
-  text-align: center;
-  width: 50%;
-  flex: 0; }
-
 html, body {
   margin: 0;
   padding: 0; }
 
-.box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /*horizontaly*/
-  justify-content: center;
-  /*vertically*/
-  min-height: 150px;
-  width: 100%; }
-
-.green {
-  background-color: #0C8542; }
-
-.red {
-  background-color: #EC1D3B; }
-
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
+  flex-wrap: wrap; }
+  .container .box {
+    border-radius: 1px;
+    border: 0;
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem; }
+  .container .red {
+    color: black;
+    background-color: #EC1D3B; }
+    .container .red a {
+      padding: 1rem;
+      text-decoration: none;
+      color: #13e2c4;
+      border: 0; }
+      .container .red a:hover {
+        padding: 1rem;
+        border: 0;
+        color: #f6fefd; }
+    .container .red .article {
+      overflow: auto;
+      flex-grow: 1; }
+      @media (min-width: 61.25em) {
+        .container .red .article {
+          column-count: 3;
+          column-gap: 1rem;
+          width: 100%; } }
+  .container .green {
+    color: black;
+    background-color: #0C8542; }
+    .container .green a {
+      padding: 1rem;
+      text-decoration: none;
+      color: #f37abd;
+      border: 0; }
+      .container .green a:hover {
+        padding: 1rem;
+        border: 0;
+        color: white; }
+    .container .green .article {
+      overflow: auto;
+      flex-grow: 1; }
+      @media (min-width: 61.25em) {
+        .container .green .article {
+          column-count: 3;
+          column-gap: 1rem;
+          width: 100%; } }
+  .container .lightblue {
+    color: black;
+    background-color: #099DD9; }
+    .container .lightblue a {
+      padding: 1rem;
+      text-decoration: none;
+      color: #f66226;
+      border: 0; }
+      .container .lightblue a:hover {
+        padding: 1rem;
+        border: 0;
+        color: white; }
+    .container .lightblue .article {
+      overflow: auto;
+      flex-grow: 1; }
+      @media (min-width: 61.25em) {
+        .container .lightblue .article {
+          column-count: 3;
+          column-gap: 1rem;
+          width: 100%; } }
+  .container .darkblue {
+    color: black;
+    background-color: #2A457A; }
+    .container .darkblue a {
+      padding: 1rem;
+      text-decoration: none;
+      color: #d5ba85;
+      border: 0; }
+      .container .darkblue a:hover {
+        padding: 1rem;
+        border: 0;
+        color: white; }
+    .container .darkblue .article {
+      overflow: auto;
+      flex-grow: 1; }
+      @media (min-width: 61.25em) {
+        .container .darkblue .article {
+          column-count: 3;
+          column-gap: 1rem;
+          width: 100%; } }
+  .container .orange {
+    color: black;
+    background-color: #F79420; }
+    .container .orange a {
+      padding: 1rem;
+      text-decoration: none;
+      color: #086bdf;
+      border: 0; }
+      .container .orange a:hover {
+        padding: 1rem;
+        border: 0;
+        color: #e8f2fe; }
+    .container .orange .article {
+      overflow: auto;
+      flex-grow: 1; }
+      @media (min-width: 61.25em) {
+        .container .orange .article {
+          column-count: 3;
+          column-gap: 1rem;
+          width: 100%; } }
 
 @media screen and (min-width: 800px) {
   .container {
@@ -57,15 +131,3 @@ html, body {
 
 *:hover > .fa-hover-show {
   display: inline-block; }
-
-.box > a {
-  padding: 1rem;
-  text-decoration: none;
-  color: #009;
-  border: 3px solid #009; }
-
-.box > a:hover {
-  padding: 1rem;
-  color: #fff;
-  background-color: #009;
-  border: 3px solid #009; }

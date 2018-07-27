@@ -13,6 +13,12 @@ body {
 
 .container {
   @include container;    
+  .box { @include box;}
+  @include set-color (red);
+  @include set-color (green);
+  @include set-color (lightblue);
+  @include set-color (darkblue);
+  @include set-color (orange);
 }
 @media screen and (min-width: 800px) {
         .container {
@@ -39,12 +45,7 @@ body {
   display: inline-block;
 }
 
-.box {
+.set-color {
 }
-.box > a:hover {
+.set-color > a:hover {
 }
-@include box (red);
-@include box (green);
-@include box (lblue);
-@include box (dblue);
-@include box (orange);
