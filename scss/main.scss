@@ -1,6 +1,7 @@
 @import "partials/functions";
 @import "partials/variables";
 @import "partials/mixins";
+@import 'partials/mq';
 
 html {
   margin: 0;
@@ -39,17 +40,6 @@ body {
 }
 
 .box {
-    a {
-      padding: 1rem;
-      text-decoration: none;
-      color: #009;
-      border: 3px solid #009;
-
-      &:hover {
-        padding: 1rem;
-        border: 3px solid #009;
-      }
-    }
 }
 .box > a:hover {
 }
