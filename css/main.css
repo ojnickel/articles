@@ -8,9 +8,14 @@ html, body {
   .container .box {
     border-radius: 1px;
     border: 0;
-    width: 100%;
     min-height: 150px;
     padding: 1rem; }
+    @media (max-width: 23.4275em) {
+      .container .box {
+        width: 100%; } }
+    @media (min-width: 23.4375em) {
+      .container .box {
+        width: 66%; } }
   .container .red {
     color: black;
     background-color: #EC1D3B; }
@@ -23,11 +28,11 @@ html, body {
         padding: 1rem;
         border: 0;
         color: #f6fefd; }
-    .container .red .article {
+    .container .red > .article {
       overflow: auto;
       flex-grow: 1; }
       @media (min-width: 61.25em) {
-        .container .red .article {
+        .container .red > .article {
           column-count: 3;
           column-gap: 1rem;
           width: 100%; } }
@@ -43,11 +48,11 @@ html, body {
         padding: 1rem;
         border: 0;
         color: white; }
-    .container .green .article {
+    .container .green > .article {
       overflow: auto;
       flex-grow: 1; }
       @media (min-width: 61.25em) {
-        .container .green .article {
+        .container .green > .article {
           column-count: 3;
           column-gap: 1rem;
           width: 100%; } }
@@ -63,11 +68,11 @@ html, body {
         padding: 1rem;
         border: 0;
         color: white; }
-    .container .lightblue .article {
+    .container .lightblue > .article {
       overflow: auto;
       flex-grow: 1; }
       @media (min-width: 61.25em) {
-        .container .lightblue .article {
+        .container .lightblue > .article {
           column-count: 3;
           column-gap: 1rem;
           width: 100%; } }
@@ -83,11 +88,11 @@ html, body {
         padding: 1rem;
         border: 0;
         color: white; }
-    .container .darkblue .article {
+    .container .darkblue > .article {
       overflow: auto;
       flex-grow: 1; }
       @media (min-width: 61.25em) {
-        .container .darkblue .article {
+        .container .darkblue > .article {
           column-count: 3;
           column-gap: 1rem;
           width: 100%; } }
@@ -103,11 +108,11 @@ html, body {
         padding: 1rem;
         border: 0;
         color: #e8f2fe; }
-    .container .orange .article {
+    .container .orange > .article {
       overflow: auto;
       flex-grow: 1; }
       @media (min-width: 61.25em) {
-        .container .orange .article {
+        .container .orange > .article {
           column-count: 3;
           column-gap: 1rem;
           width: 100%; } }
